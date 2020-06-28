@@ -3,7 +3,10 @@
 @section('content')
 
     <table class="table table-bordered">
-        <h5>{{ $task->content }}</h5>
+        <tr>
+            <td>{{ $task->content }}</td>
+            <td>{{ $task->status }}</td>
+        </tr>
     </table>
 
     {{-- タスク編集ページへのリンク --}}

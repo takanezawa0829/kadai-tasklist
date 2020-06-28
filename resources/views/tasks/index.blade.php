@@ -11,6 +11,7 @@
                 <tr>
                     {{-- タスク詳細ページへのリンク --}}
                     <td>{!! link_to_route('tasks.show', $task->content, ['task' => $task->id]) !!}</td>
+                    <td>{{ $task->status }}</td>
                 </tr>
                 @endforeach
             </tbody>
