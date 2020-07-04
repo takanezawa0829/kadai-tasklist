@@ -19,6 +19,9 @@
                 </tbody>
             </table>
         @endif
+        
+        {{-- ページネーションのリンク --}}
+        {{ $tasks->links() }}
 
         {{-- タスク作成ページへのリンク --}}
         {!! link_to_route('tasks.create', '新規タスクの追加', [], ['class' => 'btn btn-primary']) !!}
