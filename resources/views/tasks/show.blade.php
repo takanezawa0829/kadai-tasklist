@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    @if (Auth::id() == $task->user_id)
         <table class="table table-bordered">
             <tr>
                 <td>{{ $task->content }}</td>
@@ -16,5 +15,4 @@
         {!! Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
             {!! Form::submit('削除', ['class' => 'btn btn-danger']) !!}
         {!! Form::close() !!}
-    @endif
 @endsection
