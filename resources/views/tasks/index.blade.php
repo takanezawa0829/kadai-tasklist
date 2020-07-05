@@ -4,7 +4,7 @@
 
     @if (Auth::check())
     
-        <h1>タスク一覧</h1>
+        <h1>{{ $user->name }}のタスク一覧</h1>
     
         @if (count($tasks) > 0)
             <table class="table table-striped">
